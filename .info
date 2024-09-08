@@ -1,0 +1,11 @@
+LINUX
+GOOS=linux GOARCH=386 go build -o bin/mobilapi main.go
+WINDOWS
+GOOS=windows GOARCH=386 go build -o bin/mobilapi.exe main.go 
+
+
+*** Windows Servis ***
+sc.exe create Whatsapp2db binPath= /whatsapp2db.exe
+sc.exe start Whatsapp2db
+
+sc.exe delete Whatsapp2db
